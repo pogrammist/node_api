@@ -1,5 +1,7 @@
 const appPort = 3000;
 
+const jwtSecret = 'useSecret';
+
 const message = `Hi, it's my first test api!
 Use Postman for send requests, please.
 Available routes /product & /products/id
@@ -11,4 +13,8 @@ Object Product
 	price: mongoose.Schema.Types.Decimal128,
 }
 `
-module.exports = { message, appPort };
+module.exports = {
+	appPort,
+	message,
+	jwtSecret
+};

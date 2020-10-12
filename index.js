@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-require('./app/models/product')
+require('./app/models')
 cfg = require('./config');
 
 const app = express();
