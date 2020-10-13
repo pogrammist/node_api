@@ -1,7 +1,3 @@
-const appPort = 3000;
-
-const jwtSecret = 'useSecret';
-
 const message = `Hi, it's my first test api!
 Use Postman for send requests, please.
 Available routes /product & /products/id
@@ -14,7 +10,19 @@ Object Product
 }
 `
 module.exports = {
-	appPort,
 	message,
-	jwtSecret
+	appPort: 3000,
+	jwt: {
+		secret: 'useSecret',
+		tokens: {
+			access: {
+				type: 'access',
+				expiresIn: '2m'
+			},
+			refresh: {
+				type: 'refresh',
+				expiresIn: '3m'
+			}
+		}
+	}
 };

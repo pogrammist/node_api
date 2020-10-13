@@ -10,7 +10,13 @@ cfg.routes(app);
 
 const { appPort } = cfg.applet;
 
-mongoose.connect(process.env.DB_CONN, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DB_CONN,
+	{
+		useNewUrlParser: true,
+		useFindAndModify: false,
+		useCreateIndex: true,
+		useUnifiedTopology: true
+	})
 	.then(() => app.listen(
 		appPort,
 		() => console.log(`Listenig on port ${appPort}...`)
