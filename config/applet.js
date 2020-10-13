@@ -42,10 +42,13 @@ Result Products
         "__v": 0
     }
 ]
-`
+`;
+
+const appPort = process.env.PORT || 3000;
+
 module.exports = {
 	message,
-	appPort: 3000,
+	appPort,
 	jwt: {
 		secret: 'useSecret',
 		tokens: {
