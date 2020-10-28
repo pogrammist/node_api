@@ -8,3 +8,8 @@ https://youtu.be/8bE_PBRriyU
 ### add .env at project with string:
 
 DB_CONN='mongodb+srv://\<user>:\<password>\@\<cluster>/\<dbname>'
+
+
+### flutter app
+
+https://github.com/pogrammist/flutter_api
